@@ -1,0 +1,29 @@
+{% extends 'webapp/base.html' %}
+{% block content %}
+
+{% if user.is_authenticated %}
+
+Logged in as {{ user.username }}
+<br>
+
+
+<form action="{% url 'logoutuser' %}" method="POST">
+	<button type="submit">
+		{% csrf_token %}
+		Logout
+	</button>
+</form>
+
+
+{% else %}
+<br>
+<a href="#">Signup</a>
+<br>
+<a href="#">Login</a>
+
+
+{% endif %}
+
+
+
+{% endblock %}

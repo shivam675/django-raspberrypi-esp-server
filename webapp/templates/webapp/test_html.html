@@ -1,0 +1,34 @@
+{% extends 'webapp/base.html' %}
+{% block content %}
+{% load static %}
+<h2>Here you can control the esp8266 onboard LED Gpio Pin --> 2 </h2><br>
+{% csrf_token %}	
+
+<div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+            <h1>Rooms Registered</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+            <div class="list-group" >
+                {% for roomD in room_info %}
+                
+                {% if roomD.id is 1 %}
+				<a href="http://192.168.0.114/"><h4> {{ roomD.room_name }}  </h4><br></a>
+
+				{% else %}
+				<h4> {{ roomD.room_name }}  </h4><br>
+
+
+				{% endif %} 
+
+				{% endfor %}
+                
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
