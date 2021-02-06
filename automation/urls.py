@@ -25,5 +25,6 @@ urlpatterns = [
     path('after_login/', views.after_login, name='after_login'),
     path('logout/', views.logoutuser, name='logoutuser'),
     path('test_esp_led/', views.Display_info, name = 'test_esp_led'),
+    path('test_lol/', views.lol, name = 'lol'),
 
 ]

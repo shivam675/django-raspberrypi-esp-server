@@ -1,0 +1,153 @@
+/*-----Global-----*/
+*{
+  margin: 0;
+  padding: 0;
+  border:0;
+  outline: 0; 
+  font-size: 100%;
+  vertical-align: baseline;
+}
+:root{
+  --main-black:#1E202B;
+  --main-blue:#08AEEA;
+  --main-green:#2AF598;
+  --main-gradient: linear-gradient(to right, var(--main-blue), var(--main-green));
+}
+html{
+  font-family: Source Sans Pro, sans-serif;
+}
+body{
+  width: 100%;
+  background-color: darkgrey;
+  
+} 
+h1{
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--main-black);
+}
+h2{
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--main-blue);
+}
+p, li{
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--main-black);
+}
+
+/
+/*----new 4k  movies-----*/
+.new4KMovies{
+  width: 90%;
+  padding: 0 5%;
+  margin-bottom: 50px;
+}
+.sectionTitle h2, .sectionTitle a{
+  display: inline-block;
+  vertical-align: middle;
+}
+.sectionTitle a{
+  margin-left: 20px;
+}
+.sectionTitle{
+  margin: 50px 0 20px 0;
+}
+.new4KMovies ul{
+  width: 100%;
+  display: flex;
+  list-style: none;
+}
+.m1:hover{
+	transition: .6s ease;
+  	transform: scaleY(1.05) scaleX(1.05);
+  	border: 2px solid yellowgreen;
+  	opacity: 1;
+}
+.new4KMovies ul li{
+  margin: 1%;
+  padding-right: 7px;
+  padding-left: : 15px;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.16);
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.16);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.16);
+}
+/*-----footer-----*/
+footer a{
+  text-decoration: none;
+  color: var(--main-black);
+}
+footer ul{
+  list-style: none;
+  float: right;
+}
+footer ul li{
+  display: inline-block;
+  margin-left: 50px;
+}
+.copy a, .copy p{
+  display: inline-block;
+  vertical-align: middle;
+}
+.copy p{
+  margin-left: 20px;
+}
+footer{
+  width: 90%;
+  padding: 0 5%;
+}
+footer ul, .copy{
+  line-height: 80px;
+  display: inline-block;
+}
+/*-----responsive-----*/
+@media only screen and (max-width: 1200px) {
+  header{
+    height: 100vh;
+    min-height: 1000px;
+  }
+  header h1{
+    margin: 50px 0 40px 0;
+  }
+}
+@media only screen and (max-width: 900px) {
+  header h1{
+    width: 100%;
+  }
+  header {
+    background-position: left center;
+  }
+  footer ul{
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  .copy{
+    text-align: center;
+    display: block;
+  }
+  footer ul li{
+    margin: 0 25px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .new4KMovies ul{
+    flex-direction: column;
+  }
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+  .nav ul li{
+    margin: 0;
+  }
+  footer ul li{
+    display: none;
+  }
+  h1{
+    font-size: 36px;
+  }
+}

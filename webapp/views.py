@@ -48,3 +48,12 @@ def Display_info(request):
 	esp_room_info = room.objects.all()
 	esp_ip_address = switchboard.objects.all()
 	return render(request, 'webapp/test_html.html', {'room_info':esp_room_info, 'ress': esp_ip_address})
+
+
+
+
+def lol(request):
+	esp_room_info = room.objects.all()
+	esp_ip_address = switchboard.objects.all()
+	return render(request, 'webapp/home2.html', {'room_info':esp_room_info, 'ress': esp_ip_address})
+

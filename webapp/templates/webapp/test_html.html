@@ -15,12 +15,11 @@
                 {% for roomD in room_info %}
                 
                 {% if roomD.id is 1 %}
-				<a href="http://192.168.0.114/"><h4> {{ roomD.room_name }}  </h4><br></a>
-
+				<!--a href=""><h4> {{ roomD.room_name }}  </h4><br></a-->
+                <iframe src="http://192.168.0.110/" style="height:400px;width:600px;"></iframe>
 				{% else %}
 				<h4> {{ roomD.room_name }}  </h4><br>
-
-
+                
 				{% endif %} 
 
 				{% endfor %}
@@ -29,6 +28,8 @@
         </div>
     </div>
 
+<section  style="height: 400px;width: 600px;background-color: red;"><!--iframe src="http://192.168.0.110/" style="height: 400px;width: 600px;"></iframe--></section>
+<section  style="height: 400px;width: 600px;background-color: blue;float: right;"><iframe src="http://192.168.0.110/" style="height: 400px;width: 600px;"></iframe></section>
 
 
 {% endblock %}
